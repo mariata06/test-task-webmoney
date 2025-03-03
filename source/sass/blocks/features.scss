@@ -1,0 +1,115 @@
+.features {
+  box-shadow: 0px 0px 100px 0px #AFA1F94D;
+  margin-top: 109px;
+  padding: 55px 0 25px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature-btn {
+    border-radius: 100px;
+    min-height: 70px;
+    padding: 25px 45px;
+    text-transform: uppercase;
+    font-family: "montserrat-semi-bold";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 0%;
+    text-align: center;
+    border-width: 2px;
+    margin: 0 10px;
+    margin-bottom: 30px;
+    min-width: unset;
+    cursor: pointer;
+
+    transition: all $trans-default;
+
+    @include hover-focus {
+      border-color: #FFD100;
+      color: #FFD100;
+    }
+  }
+
+  .feature-btn:first-child {
+    // margin-left: 0;
+  }
+
+  .container {
+    padding: 0 267px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .features .container {
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Стили для устройств шириной от 769px до 1024px */
+  .features .container {
+    padding: 0 24px;
+  }
+
+  .features {
+    margin-top: 0;
+  }
+
+  .features .feature-btn {
+    padding: 15px 30px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .features {
+    margin-top: 60px;
+  }
+
+  .features .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .features .feature-btn:first-child {
+    // margin-left: unset;
+    margin-left: 10px;
+  }
+
+  .features .feature-btn {
+    margin: 0 10px 30px;
+    margin-left: unset;
+    padding: 20px 25px;
+    margin: 0 5px 20px;
+    padding: 15px 20px;
+    font-size: 12px;
+    line-height: 14px;
+    min-height: unset;
+  }
+}
+
+@media (max-width: 320px) {
+  .features__list {
+    flex-direction: column;
+  }
+  .feature {
+    align-self: stretch;
+
+    .btn {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  .features .feature-btn:first-child {
+    margin-left: 0;
+  }
+}

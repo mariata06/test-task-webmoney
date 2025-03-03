@@ -1,5 +1,113 @@
 .footer {
-  padding: 40px 0;
+  padding: 89px 0 53px;
 
   background-color: $color-neon-blue;
+  background-color: $color-default-white;
+  color: #5540BF;
+
+  &__logo {
+    font-family: "montserrat-bold";
+    font-weight: 700;
+    color: #5540BF;
+    transition: opacity $trans-default;
+    cursor: pointer;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  a {
+    color: #5540BF;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__social-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-self: start;
+    margin: 0;
+    margin-bottom: 26px;
+  }
+
+  &__social-item {
+    margin-left: 18px;
+    display: flex;
+
+    svg {
+      user-select: none;
+    }
+  }
+
+  &__social-link {
+    transition: opacity $trans-default;
+    cursor: pointer;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  p {
+    width: 100%;
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: right;
+    margin: 0;
+
+    a {
+      transition: opacity $trans-default;
+      cursor: pointer;
+
+      @include hover-focus {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footer .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer__logo {
+    margin-bottom: 40px;
+  }
+
+  .footer__social-list {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__social-item {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .footer .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

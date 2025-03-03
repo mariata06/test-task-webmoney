@@ -1,0 +1,172 @@
+.videoapp {
+  position: relative;
+  background: linear-gradient(78.94deg, #5540BF 36.07%, #AFA1F9 99.58%);
+  z-index: 1000;
+  padding: 101px 0 87px;
+  color: $color-default-white;
+  // overflow: hidden;
+  overflow: visible;
+    /* Если родитель имеет overflow:hidden, это может скрывать дочерний элемент */
+  visibility: visible;
+    /* Убедитесь, что родитель не скрывает элементы */
+  display: block;
+  min-height: 500px;
+
+  .container {
+    padding-right: 122px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin-bottom: 36px;
+  }
+
+  &__text {
+    width: 516px;
+  }
+
+  // &::after {
+  //   content: "";
+  //   width: 152px;
+  //   height: 152px;
+  //   display: block;
+  //   background: #9BD9F980;
+  //   position: absolute;
+  //   right: 56px;
+  //   top: -98px;
+  //   border-radius: 200px;
+  //   z-index: 10;
+  // }
+
+  &__paragraph {
+    font-family: "open-sans-regular";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    margin: 0;
+    margin-bottom: 44px;
+  }
+
+  &__images {
+    // position: absolute;
+    position: relative;
+    // top: -70px;
+    // right: 122px;
+    margin-top: -143px;
+    align-self: start;
+
+    img {
+      min-height: 455px;
+      min-width: 588px;
+      box-shadow: 0px 0px 20px rgba(85, 64, 191, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      z-index: 100;
+    }
+
+    svg {
+      width: 86px;
+      height: 102px;
+      position: absolute;
+      left: -45px;
+      bottom: -30px;
+      z-index: -1;
+    }
+  }
+}
+
+// .videoapp {
+//   position: relative;
+//   background: linear-gradient(78.94deg, #5540BF 36.07%, #AFA1F9 99.58%);
+//   z-index: 1000;
+
+//   /* Родитель не скрывает, чтобы другие элементы могли накрывать его */
+//   &::after {
+//     content: "";
+//     width: 152px;
+//     height: 152px;
+//     display: block;
+//     background: #9BD9F980;
+//     position: absolute;
+//     top: 0;
+//     /* Верхняя часть круга на верхней границе блока */
+//     right: 56px;
+//     border-radius: 50%;
+//     z-index: -1;
+//     /* Ставим круг ниже родителя */
+//   }
+// }
+
+@media (max-width: 1280px) {
+  .videoapp__images img {
+    min-width: unset;
+    min-height: unset;
+  }
+
+  .videoapp__images {
+    width: 50%;
+  }
+
+  .videoapp__text {
+    width: 40%;
+  }
+
+  .videoapp .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .videoapp {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .videoapp .container {
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  .videoapp__images {
+    margin-top: unset;
+    margin: 0 auto;
+    // width: 70%;
+
+    img {
+      min-width: unset;
+      min-height: unset;
+    }
+  }
+
+  .videoapp__text {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 60px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .videoapp__images {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .videoapp__text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .videoapp__btn {
+    width: 100%;
+  }
+
+  .videoapp__images svg {
+    transform: scale(0.5);
+    bottom: -40px;
+  }
+}

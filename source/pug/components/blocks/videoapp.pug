@@ -1,0 +1,13 @@
+mixin videoapp()
+  .videoapp
+    .container
+      .videoapp__text
+        h2.videoapp__title.title.title--h2 Проводите онлайн&#8209;трансляции
+
+        p.videoapp__paragraph Помимо звонков, вы можете использовать VideoApplication для проведения онлайн-трансляций. Количество зрителей не ограничено.
+
+        button.videoapp__btn.btn.btn--bg-white(type="button", aria-label="начать звонок", aria-pressed="false") начать звонок
+
+      .videoapp__images
+        +img("content", "statistic", "png", "588", "455", "Пример")
+        +icon("deco-dots-3", 86, 102)

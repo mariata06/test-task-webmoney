@@ -1,0 +1,44 @@
+.title {
+  // margin: 0;
+
+  &--h1 {
+    font-family: "montserrat-bold";
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 52px;
+    letter-spacing: 0%;
+  }
+
+  &--h2 {
+    font-family: "montserrat-bold";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0%;
+    color: $color-default-white;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .title--h1 {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+  .title--h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .title--h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .title--h2 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}

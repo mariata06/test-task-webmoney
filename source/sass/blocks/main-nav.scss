@@ -5,16 +5,24 @@
     margin-right: 20px;
     margin-left: 60px;
     padding: 0;
+    margin: 0;
+    margin-left: 60px;
 
     list-style: none;
   }
 
   &__item {
-    margin-right: 20px;
+    margin-left: 20px;
   }
 
   &__link {
     color: $color-default-white;
+    transition: opacity $trans-default;
+    cursor: pointer;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
 
     &.is-active {
       opacity: 0.6;
@@ -23,5 +31,11 @@
 
   &__toggle {
     display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .main-nav__list {
+    margin-left: 0;
   }
 }

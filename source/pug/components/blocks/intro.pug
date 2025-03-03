@@ -2,9 +2,32 @@ mixin intro()
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
+    .intro__bg-polygon
+      img(src="img/svg/polygon-2.svg" width="581", height="464", alt="bg image")
     .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
+      //- .intro__bg-polygon
+      //-   img(src="img/svg/polygon-2.svg" "581", "464", "Пример")
+      .intro__text
+        h1.intro__title.title.title--h1 Бесплатные видеозвонки для общения без границ
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+        .call-invite-info
+          p(class="invite-text") Для начала звонка отправьте собеседнику ссылку&#8209;приглашение. Общайтесь с коллегами, бизнес-партнерами и друзьями бесплатно и без ограничений по времени.
+          .intro__btns
+            button.intro__btn.btn.btn--bg-white(type="button", aria-label="начать звонок", aria-pressed="false") начать звонок
+            button.intro__btn.btn.btn--bg-transparent(type="button", aria-label="конференция", aria-pressed="false") Конференция
+
+          p(class="auth-prompt") Для входа в VideoApplication авторизуйтесь или зарегистрируйтесь в&nbsp;системе
+
+      .intro__images
+        .intro__img-wrapper-top
+          +img("content", "person-1", "png", "243", "361", "Пример")
+          +icon("deco-dots-1", 172, 70)
+        .intro__img-wrapper-bottom
+          +img("content", "chat-list", "png", "179", "237", "Пример")
+          +icon("deco-dots-2", 86, 70)
+        .intro__img-wrapper-center
+          +img("content", "call-img", "png", "168", "176", "Пример")
+        .intro__img-wrapper-right
+          +img("content", "person-2", "png", "243", "361", "Пример")
+
+    +features()

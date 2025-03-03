@@ -4,7 +4,7 @@
 
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  // background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
 
@@ -22,5 +22,51 @@
 
   @include hover-focus {
     opacity: 0.8;
+  }
+
+  &--bg-transparent,
+  &--bg-white {
+    text-transform: uppercase;
+    border-radius: 5px;
+    min-width: 185px;
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--bg-transparent {
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+  }
+
+  &--bg-white {
+    background-color: $color-default-white;
+    color: #5540BF;
+  }
+
+  &--bg-purple {
+    background-color: #5540BF;
+    color: $color-default-white;
+    border-radius: 5px;
+    // min-width: 230px;
+    padding: 18px 40px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--border-purple {
+    border: 1px solid #5540BF;
+    color: #5540BF;
+    background-color: transparent;
+    border-radius: 5px;
+    min-width: 185px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 40px;
   }
 }
